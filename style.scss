@@ -1,6 +1,6 @@
 @import "./fonts.css";
 
-$primary-color: #00487A;
+$primary-color: #0029b1; //#00487A - default
 $secondary-color: #FFF316;
 $gray-color: #CED4DA;
 $white-color: #ffffff;
@@ -12,6 +12,8 @@ $text-font: "open sans";
 $header-height: 80px;
 
 // vytvorit guide scss file - barvy pismo atd.
+// udelat nadpisy stylem ze jsou highlightnute barvou (jako je main logo v hero section)
+
 // po kliknuti na logo presmerovat na main page
 
 @mixin center {
@@ -36,11 +38,31 @@ h3, h4 {
     font-family: $subheader-font;
 }
 
+h2, h3, h4 {
+    padding: 20px;
+}
+
+p {
+    font-family: $text-font;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
 p, span {
     .logo {
         font-family: $header-font;
     }
 }
+
+// table style --nerozumim tomu
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-oxxk{background-color:#F0F0F0;text-align:center;vertical-align:top}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-25ii{background-color:#F0F0F0;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+
 
 button {
     height: fit-content;
@@ -102,6 +124,7 @@ header {
         button {
             background-color: $secondary-color;
             color: $primary-color;
+            transition: transform 0.2s ease-in-out;
 
             a {
                 font-size: 1em;
@@ -109,7 +132,9 @@ header {
             }
 
             &:hover {
-                background-color: darken($secondary-color, 10%);
+                filter: brightness(90%);
+                transform: scale(1.05);
+                transition: transform 0.3s ease-in-out;
             }
         }
     }
@@ -124,10 +149,10 @@ section {
     padding: 32px 10px;
 
     background-color: $gray-color;
-    
+
     &.hero-section {
         height: calc(100vh - $header-height);
-        background: radial-gradient(circle, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5));
+        background: radial-gradient(circle, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.50));
 
         gap: 40px;
 
@@ -141,6 +166,7 @@ section {
 
         button {
             background-color: $secondary-color;
+            transition: transform 0.2s ease-in-out;
 
             a {
                 font-size: 1em;
@@ -148,33 +174,90 @@ section {
             }
 
             &:hover {
-                background-color: darken($secondary-color, 10%);
+                filter: brightness(90%);
+                transform: scale(1.05);
+                transition: transform 0.3s ease-in-out;
             }
         }
 
         div.logo-and-slogan {
-            text-align: center;
+            @include center();
+
             color: $secondary-color;
+            gap: 10px;
 
             .logo {
                 font-family: $header-font;
                 font-size: 5em;
+                background-color: $primary-color;
             }
 
             .slogan {
                 font-family: $subheader-font;
                 font-size: 2em;
+                background-color: $primary-color;
             }
         }
     }
 }
 
-// main {
-//     section {
-        
-//     }
-// }
+#harmonogram {
+    background-color: $primary-color;
+    color: $secondary-color;
 
+    span {
+        color: black;
+    }
+}
+
+main {
+    section {
+        background-color: $white-color;
+    }
+}
+
+#tym {
+    div.cards {
+        @include center();
+
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        padding: 20px;
+        gap: 80px;
+
+        div.clen-tymu {
+            @include center();
+
+            img {
+                width: 125px;
+                height: 125px;
+                object-fit: cover;
+                border-radius: 50%;
+
+                margin-bottom: 16px;
+            }
+
+            p {
+
+                &.jmeno {
+                    font-family: $header-font;
+                    font-size: 1.5em;
+                }
+                
+                &.skola {
+                    font-family: $subheader-font;
+                    font-size: 1em;
+                }
+
+                &.role {
+                    font-family: $text-font;
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
 
 
 footer {
