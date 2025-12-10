@@ -1,9 +1,123 @@
+@import "./fonts.css";
+
+$primary-color: #00487A;
+$secondary-color: #FFF316;
+$gray-color: #CED4DA;
+$white-color: #ffffff;
+
+$header-font: "Days One";
+$subheader-font: "roboto slab";
+$text-font: "open sans";
+
+$header-height: 80px;
+
+// vytvorit guide scss file - barvy pismo atd.
+
+@mixin center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: $header-font;
+}
+
+h3, h4 {
+    font-family: $subheader-font;
+}
+
+p, span {
+    font-family: $text-font;
+
+    .logo {
+        font-family: $header-font;
+    }
+}
+
+button {
+    height: fit-content;
+    width: fit-content;
+    margin-left: 20px;
+    padding: 8px 16px;
+    background-color: $gray-color;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: $header-font;
+}
+
 header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    background-color: #0c4d0c;
+    align-items: center;
+
+    height: $header-height;
+
+    background-color: $primary-color;
 
     nav {
         display: flex;
+        flex-direction: row;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+
+            list-style: none;
+            li {
+                a {
+                    text-decoration: none;
+                    color: $white-color;
+                    font-family: $header-font;
+                    font-size: 1em;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
     }
+}
+
+section {
+    @include center;
+
+    width: 100%;
+    height: min-content;
+
+    padding: 32px 10px;
+    
+    &.hero-section {
+        height: calc(100vh - $header-height);
+        background-color: $gray-color;
+
+        button {
+            background-color: $secondary-color;
+        }
+    }
+}
+
+// main {
+//     section {
+        
+//     }
+// }
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $primary-color;
 }
