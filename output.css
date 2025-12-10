@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: inherit;
 }
 
 h1, h2 {
@@ -13,9 +14,6 @@ h3, h4 {
   font-family: "roboto slab";
 }
 
-p, span {
-  font-family: "open sans";
-}
 p .logo, span .logo {
   font-family: "Days One";
 }
@@ -30,6 +28,11 @@ button {
   border-radius: 12px;
   cursor: pointer;
   font-family: "Days One";
+  font-size: 1em;
+}
+
+header, footer {
+  padding: 0px 40px;
 }
 
 header {
@@ -39,6 +42,11 @@ header {
   align-items: center;
   height: 80px;
   background-color: #00487A;
+  color: #FFF316;
+}
+header .logo {
+  font-family: "Days One";
+  font-size: 2em;
 }
 header nav {
   display: flex;
@@ -53,12 +61,21 @@ header nav ul {
 }
 header nav ul li a {
   text-decoration: none;
-  color: #ffffff;
   font-family: "Days One";
-  font-size: 1em;
 }
 header nav ul li a:hover {
   text-decoration: underline;
+}
+header nav button {
+  background-color: #FFF316;
+  color: #00487A;
+}
+header nav button a {
+  font-size: 1em;
+  text-decoration: none;
+}
+header nav button:hover {
+  background-color: rgb(226, 214.3605150215, 0);
 }
 
 section {
@@ -69,20 +86,90 @@ section {
   width: 100%;
   height: min-content;
   padding: 32px 10px;
+  background-color: #CED4DA;
 }
 section.hero-section {
   height: calc(100vh - 80px);
-  background-color: #CED4DA;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5));
+  gap: 40px;
+}
+section.hero-section img {
+  z-index: -1;
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 section.hero-section button {
   background-color: #FFF316;
 }
+section.hero-section button a {
+  font-size: 1em;
+  text-decoration: none;
+}
+section.hero-section button:hover {
+  background-color: rgb(226, 214.3605150215, 0);
+}
+section.hero-section div.logo-and-slogan {
+  text-align: center;
+  color: #FFF316;
+}
+section.hero-section div.logo-and-slogan .logo {
+  font-family: "Days One";
+  font-size: 5em;
+}
+section.hero-section div.logo-and-slogan .slogan {
+  font-family: "roboto slab";
+  font-size: 2em;
+}
 
 footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding: 40px 32px;
   background-color: #00487A;
+  color: #FFF316;
+  font-family: "roboto slab";
+}
+footer nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  list-style: none;
+}
+footer nav ul li a {
+  text-decoration: none;
+}
+footer nav ul li a:hover {
+  text-decoration: underline;
+}
+footer div.logo-and-slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #FFF316;
+}
+footer div.logo-and-slogan .logo {
+  font-family: "Days One";
+  font-size: 2em;
+}
+footer div.logo-and-slogan .slogan {
+  font-size: 1em;
+}
+footer .rightbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-end;
+  color: inherit;
 }
 
 /*# sourceMappingURL=output.css.map */

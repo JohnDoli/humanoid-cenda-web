@@ -12,6 +12,7 @@ $text-font: "open sans";
 $header-height: 80px;
 
 // vytvorit guide scss file - barvy pismo atd.
+// po kliknuti na logo presmerovat na main page
 
 @mixin center {
     display: flex;
@@ -24,6 +25,7 @@ $header-height: 80px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: inherit
 }
 
 h1, h2 {
@@ -35,8 +37,6 @@ h3, h4 {
 }
 
 p, span {
-    font-family: $text-font;
-
     .logo {
         font-family: $header-font;
     }
@@ -52,6 +52,12 @@ button {
     border-radius: 12px;
     cursor: pointer;
     font-family: $header-font;
+
+    font-size: 1em;
+}
+
+header, footer {
+    padding: 0px 40px;
 }
 
 header {
@@ -63,6 +69,12 @@ header {
     height: $header-height;
 
     background-color: $primary-color;
+    color: $secondary-color;
+
+    .logo {
+        font-family: $header-font;
+        font-size: 2em;
+    }
 
     nav {
         display: flex;
@@ -78,9 +90,7 @@ header {
             li {
                 a {
                     text-decoration: none;
-                    color: $white-color;
                     font-family: $header-font;
-                    font-size: 1em;
 
                     &:hover {
                         text-decoration: underline;
@@ -88,23 +98,73 @@ header {
                 }
             }
         }
+
+        button {
+            background-color: $secondary-color;
+            color: $primary-color;
+
+            a {
+                font-size: 1em;
+                text-decoration: none;
+            }
+
+            &:hover {
+                background-color: darken($secondary-color, 10%);
+            }
+        }
     }
 }
 
 section {
-    @include center;
+    @include center();
 
     width: 100%;
     height: min-content;
 
     padding: 32px 10px;
+
+    background-color: $gray-color;
     
     &.hero-section {
         height: calc(100vh - $header-height);
-        background-color: $gray-color;
+        background: radial-gradient(circle, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5));
+
+        gap: 40px;
+
+        img {
+            z-index: -1;
+            position: absolute;
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
 
         button {
             background-color: $secondary-color;
+
+            a {
+                font-size: 1em;
+                text-decoration: none;
+            }
+
+            &:hover {
+                background-color: darken($secondary-color, 10%);
+            }
+        }
+
+        div.logo-and-slogan {
+            text-align: center;
+            color: $secondary-color;
+
+            .logo {
+                font-family: $header-font;
+                font-size: 5em;
+            }
+
+            .slogan {
+                font-family: $subheader-font;
+                font-size: 2em;
+            }
         }
     }
 }
@@ -115,9 +175,60 @@ section {
 //     }
 // }
 
+
+
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    padding: 40px 32px;
+    
     background-color: $primary-color;
+    color: $secondary-color;
+
+    font-family: $subheader-font;
+
+    nav ul {
+        @include center();
+
+        align-items: flex-start;
+
+        list-style: none;
+
+        li {
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    div.logo-and-slogan {
+        @include center();
+
+        text-align: center;
+        color: $secondary-color;
+
+        .logo {
+            font-family: $header-font;
+            font-size: 2em;
+        }
+
+        .slogan {
+            font-size: 1em;
+        }
+    }
+
+    .rightbox {
+        @include center();
+
+        align-items: flex-end;
+        color: inherit;
+    }
 }
