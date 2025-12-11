@@ -1,7 +1,7 @@
 @import "./fonts.css";
 
-$primary-color: #0029b1; //#00487A - default
-$secondary-color: #FFF316;
+$primary-color: #1B211A; //#00487A - default // 0029b1 - dark blue
+$secondary-color: #628141; // FFF316 - zluta
 $gray-color: #CED4DA;
 $white-color: #ffffff;
 
@@ -54,14 +54,14 @@ p, span {
     }
 }
 
-// table style --nerozumim tomu
+// table style -nerozumim tomu
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-oxxk{background-color:#F0F0F0;text-align:center;vertical-align:top}
-.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-baqh{background-color:#628141;text-align:center;vertical-align:top}
 .tg .tg-25ii{background-color:#F0F0F0;text-align:left;vertical-align:top}
-.tg .tg-0lax{text-align:left;vertical-align:top}
+.tg .tg-0lax{background-color:#628141;text-align:left;vertical-align:top}
 
 
 button {
@@ -152,7 +152,7 @@ section {
 
     &.hero-section {
         height: calc(100vh - $header-height);
-        background: radial-gradient(circle, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.50));
+        background: radial-gradient(circle, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65));
 
         gap: 40px;
 
@@ -189,13 +189,13 @@ section {
             .logo {
                 font-family: $header-font;
                 font-size: 5em;
-                background-color: $primary-color;
+                // background-color: $primary-color;
             }
 
             .slogan {
                 font-family: $subheader-font;
                 font-size: 2em;
-                background-color: $primary-color;
+                // background-color: $primary-color;
             }
         }
     }
@@ -212,7 +212,18 @@ section {
 
 main {
     section {
-        background-color: $white-color;
+        section {
+            flex-direction: row;
+
+            background-color: $white-color;
+
+            div.model {
+                width: 200px;
+                height: 200px;
+
+                background-color: $gray-color
+            }
+        }
     }
 }
 

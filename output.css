@@ -63,6 +63,7 @@ p .logo, span .logo {
 }
 
 .tg .tg-baqh {
+  background-color: #628141;
   text-align: center;
   vertical-align: top;
 }
@@ -74,6 +75,7 @@ p .logo, span .logo {
 }
 
 .tg .tg-0lax {
+  background-color: #628141;
   text-align: left;
   vertical-align: top;
 }
@@ -101,8 +103,8 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  background-color: #0029b1;
-  color: #FFF316;
+  background-color: #1B211A;
+  color: #628141;
 }
 header .logo {
   font-family: "Days One";
@@ -127,8 +129,8 @@ header nav ul li a:hover {
   text-decoration: underline;
 }
 header nav button {
-  background-color: #FFF316;
-  color: #0029b1;
+  background-color: #628141;
+  color: #1B211A;
   transition: transform 0.2s ease-in-out;
 }
 header nav button a {
@@ -153,7 +155,7 @@ section {
 }
 section.hero-section {
   height: calc(100vh - 80px);
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5));
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65));
   gap: 40px;
 }
 section.hero-section img {
@@ -164,7 +166,7 @@ section.hero-section img {
   object-fit: cover;
 }
 section.hero-section button {
-  background-color: #FFF316;
+  background-color: #628141;
   transition: transform 0.2s ease-in-out;
 }
 section.hero-section button a {
@@ -181,30 +183,34 @@ section.hero-section div.logo-and-slogan {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #FFF316;
+  color: #628141;
   gap: 10px;
 }
 section.hero-section div.logo-and-slogan .logo {
   font-family: "Days One";
   font-size: 5em;
-  background-color: #0029b1;
 }
 section.hero-section div.logo-and-slogan .slogan {
   font-family: "roboto slab";
   font-size: 2em;
-  background-color: #0029b1;
 }
 
 #harmonogram {
-  background-color: #0029b1;
-  color: #FFF316;
+  background-color: #1B211A;
+  color: #628141;
 }
 #harmonogram span {
   color: black;
 }
 
-main section {
+main section section {
+  flex-direction: row;
   background-color: #ffffff;
+}
+main section section div.model {
+  width: 200px;
+  height: 200px;
+  background-color: #CED4DA;
 }
 
 #tym div.cards {
@@ -250,8 +256,8 @@ footer {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   padding: 40px 32px;
-  background-color: #0029b1;
-  color: #FFF316;
+  background-color: #1B211A;
+  color: #628141;
   font-family: "roboto slab";
 }
 footer nav ul {
@@ -274,7 +280,7 @@ footer div.logo-and-slogan {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #FFF316;
+  color: #628141;
 }
 footer div.logo-and-slogan .logo {
   font-family: "Days One";
