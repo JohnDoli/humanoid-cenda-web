@@ -64,7 +64,7 @@ p .logo, span .logo {
 }
 
 .tg .tg-baqh {
-  background-color: #628141;
+  background-color: #dad726;
   text-align: center;
   vertical-align: top;
 }
@@ -76,7 +76,7 @@ p .logo, span .logo {
 }
 
 .tg .tg-0lax {
-  background-color: #628141;
+  background-color: #dad726;
   text-align: left;
   vertical-align: top;
 }
@@ -104,8 +104,8 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  background-color: #1B211A;
-  color: #719649;
+  background-color: #0f0f0f;
+  color: #dad726;
 }
 header .logo {
   font-family: "Days One";
@@ -130,8 +130,8 @@ header nav ul li a:hover {
   text-decoration: underline;
 }
 header nav button {
-  background-color: #719649;
-  color: #1B211A;
+  background-color: #dad726;
+  color: #0f0f0f;
   transition: transform 0.2s ease-in-out;
 }
 header nav button a {
@@ -167,7 +167,7 @@ section.hero-section img {
   object-fit: cover;
 }
 section.hero-section button {
-  background-color: #719649;
+  background-color: #dad726;
   transition: transform 0.2s ease-in-out;
 }
 section.hero-section button a {
@@ -184,7 +184,7 @@ section.hero-section div.logo-and-slogan {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #719649;
+  color: #dad726;
   gap: 10px;
 }
 section.hero-section div.logo-and-slogan .logo {
@@ -220,10 +220,24 @@ section#kontakt div.kontakt-container div.box h4 {
 section#kontakt div.sponzor img {
   width: 250px;
 }
+section#galerie {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+section#galerie div.gallery-row {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: visible;
+  white-space: nowrap;
+}
 
 #harmonogram {
-  background-color: #1B211A;
-  color: #719649;
+  background-color: #0f0f0f;
+  color: #dad726;
 }
 #harmonogram span {
   color: black;
@@ -301,8 +315,8 @@ footer {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   padding: 40px 32px;
-  background-color: #1B211A;
-  color: #719649;
+  background-color: #0f0f0f;
+  color: #dad726;
   font-family: "roboto slab";
 }
 footer nav ul {
@@ -325,7 +339,7 @@ footer div.logo-and-slogan {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #719649;
+  color: #dad726;
 }
 footer div.logo-and-slogan .logo {
   font-family: "Days One";

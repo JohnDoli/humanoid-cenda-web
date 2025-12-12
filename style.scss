@@ -1,7 +1,7 @@
 @import "./fonts.css";
 
-$primary-color: #1B211A; //#00487A - default // 0029b1 - dark blue
-$secondary-color: #719649; // FFF316 - zluta
+$primary-color: #0f0f0f; // 1B211A // 8f00c7 // 0f0f0f
+$secondary-color: #dad726; // 719649 // fffc33 // fffc33
 $gray-color: #CED4DA;
 $white-color: #ffffff;
 
@@ -60,9 +60,9 @@ p, span {
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-oxxk{background-color:#F0F0F0;text-align:center;vertical-align:top}
-.tg .tg-baqh{background-color:#628141;text-align:center;vertical-align:top}
+.tg .tg-baqh{background-color: $secondary-color;text-align:center;vertical-align:top}
 .tg .tg-25ii{background-color:#F0F0F0;text-align:left;vertical-align:top}
-.tg .tg-0lax{background-color:#628141;text-align:left;vertical-align:top}
+.tg .tg-0lax{background-color:$secondary-color;text-align:left;vertical-align:top}
 
 
 button {
@@ -231,6 +231,23 @@ section {
             img {
                 width: 250px;
             }
+        }
+    }
+
+    &#galerie {
+        padding-left: 40px;
+        padding-right: 40px;
+        div.gallery-row {
+            display: inline-flex;
+            flex-direction: row;
+            gap: 20px;
+
+            width: 100%;
+            height: 300px;
+            overflow-y: auto;
+            overflow-x: visible;
+
+            white-space: nowrap;
         }
     }
 }
