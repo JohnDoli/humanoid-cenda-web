@@ -23,7 +23,7 @@
                 <li><a href="#projekt">O projektu</a></li>
                 <li><a href="#galerie">Galerie</a></li>
             </ul>
-            <button><a href="#kontakt">Kontakt</a></button>
+            <a href="#kontakt" class="button">Kontakt</a>
         </nav>
     </header>
     <aside>
@@ -31,13 +31,15 @@
             <img src="./assets/hero.png" alt="Hero image">
             <div class="logo-and-slogan">
                 <h1 class="logo">Č.e.n.d.a</h1>
-                <span class="slogan">studentský humanoid</span>
+                <span class="slogan">Studentský Humanoid</span>
             </div>
-            <button><a href="#projekt">O projektu</a></button>
+            <a href="#projekt" class="button">O projektu</a>
         </section>
         <section id="harmonogram" class="first-after-hero">
             <h2>Kde nás najdete?</h2>
-            <p>Můžete nás vidět na dnech otevřených dveří <a href="https://www.ssps.cz" target="_blank">SSPŠaG</a> nebo na výstavach jako například MakerFaire Prague.</p>
+            <p>Můžete nás vidět na dnech otevřených dveří <a href="https://www.ssps.cz" target="_blank">Střední průmyslové školy a gymnázia</a> (SSPŠaG) nebo na výstavach MakerFaire Prague, OpenAlt a dalších.</p>
+            <br>
+            <h3>Termíny dnů otevřených dveří.</h3>
             <table class="tg">
                 <thead>
                 <tr>
@@ -84,22 +86,22 @@
             <h2>Náš tým</h2>
             <div class="cards">
                 <div class="clen-tymu">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1V3eP9xBGbhTHIT05TtphBoyFLw-bSgt0fg&s" alt="profilovka">
-                    <p class="jmeno">Jméno</p>
-                    <p class="skola">škola</p>
-                    <p class="role">role</p>
+                    <img src="assets/hero.png" alt="profilovka">
+                    <p class="jmeno">Jan Doležal</p>
+                    <p class="skola">SSPŠaG</p>
+                    <p class="role">Vedení týmu</p>
                 </div>
                 <div class="clen-tymu">
-                    <img src="https://media.tenor.com/1W-HKNvj8UoAAAAM/cat.gif" alt="profilovka">
-                    <p class="jmeno">Jméno</p>
-                    <p class="skola">škola</p>
-                    <p class="role">role</p>
+                    <img src="assets/hero.png" alt="profilovka">
+                    <p class="jmeno">Jan Vitousek</p>
+                    <p class="skola">SSPŠaG</p>
+                    <br>
                 </div>
                 <div class="clen-tymu">
-                    <img src="https://media.makeameme.org/created/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-a59d1be411.jpg" alt="profilovka">
-                    <p class="jmeno">Jméno</p>
-                    <p class="skola">škola</p>
-                    <p class="role">role</p>
+                    <img src="assets/hero.png" alt="profilovka">
+                    <p class="jmeno">Jan Beneš</p>
+                    <p class="skola">SPŠSE České Budějovice</p>
+                    <br>
                 </div>
             </div>
         </section>
@@ -136,19 +138,12 @@
         </section>
     </main>
     <aside>
-        <section id="galerie">
+        <!-- <section id="galerie">
             <h2>Galerie</h2>
-            <div class="gallery-row">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg" alt="">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg" alt="">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg" alt="">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg" alt="">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg" alt="">
-
-            </div>
-        </section>
+            <i>Galerie zatím neobsahuje žádné fotografie.</i>
+        </section> -->
         <section id="kontakt">
-            <div class="kontakt-container">
+            <div class="container">
                 <h2>Kontakt</h2>
                 <div class="box">
                     <div class="text">
@@ -165,9 +160,9 @@
                     <img width="32" height="32" src="https://img.icons8.com/windows/32/1A1A1A/place-marker.png" alt="place-marker"/>
                 </div>
             </div>
-            <div class="sponzor">
+            <div class="container">
                 <h3>Sponzor</h3>
-                <img src="./assets/logo-SSPS.png" alt="Logo SSPŠaG">
+                <img class="ssps-logo" src="./assets/logo-SSPS.png" alt="Logo SSPŠaG">
             </div>
         </section>
     </aside>
@@ -183,7 +178,7 @@
         </nav>
         <div class="logo-and-slogan">
             <span class="logo">Č.e.n.d.a</span>
-            <span class="slogan">studentský humanoid</span>
+            <span class="slogan">Studentský Humanoid</span>
         </div>
         <div class="rightbox">
             <a href="" style="text-decoration: line-through;">Instagram</a>

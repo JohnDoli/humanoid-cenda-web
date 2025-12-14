@@ -12,22 +12,33 @@ $text-font: "open sans";
 $header-height: 80px;
 
 // vytvorit guide scss file - barvy pismo atd.
-// udelat nadpisy stylem ze jsou highlightnute barvou (jako je main logo v hero section)
 
 // po kliknuti na logo presmerovat na main page
 
-@mixin center {
+@mixin flex-col-center {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    font-family: $text-font;
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: inherit
+    color: inherit;
 }
 
 h1, h2 {
@@ -38,9 +49,8 @@ h3, h4 {
     font-family: $subheader-font;
 }
 
-h2, h3, h4 {
+h1, h2, h3 {
     padding-bottom: 20px;
-    text-align: center;
 }
 
 p {
@@ -49,10 +59,21 @@ p {
     line-height: 1.5em;
 }
 
-p, span {
-    .logo {
-        font-family: $header-font;
+ul a, a.button{
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
     }
+}
+
+
+header, footer, section {
+    padding: 0px 40px;
+}
+
+.logo {
+    font-family: $header-font;
 }
 
 // table style -nerozumim tomu
@@ -65,34 +86,37 @@ p, span {
 .tg .tg-0lax{background-color:$secondary-color;text-align:left;vertical-align:top}
 
 
-button {
+.button {
     height: fit-content;
     width: fit-content;
     margin-left: 20px;
     padding: 8px 16px;
     background-color: $gray-color;
-    border: none;
     border-radius: 12px;
-    cursor: pointer;
     font-family: $header-font;
 
     font-size: 1em;
-}
 
-header, footer {
-    padding: 0px 40px;
+    color: $primary-color;
+    background-color: $secondary-color;
+
+    &:hover {
+        filter: brightness(90%);
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+    }
 }
 
 header {
-    display: flex;
-    flex-direction: row;
+    @include flex-row-center();
     justify-content: space-between;
-    align-items: center;
 
     height: $header-height;
 
     background-color: $primary-color;
     color: $secondary-color;
+
+    font-family: $header-font;
 
     .logo {
         font-family: $header-font;
@@ -110,39 +134,12 @@ header {
             gap: 20px;
 
             list-style: none;
-            li {
-                a {
-                    text-decoration: none;
-                    font-family: $header-font;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
-        }
-
-        button {
-            background-color: $secondary-color;
-            color: $primary-color;
-            transition: transform 0.2s ease-in-out;
-
-            a {
-                font-size: 1em;
-                text-decoration: none;
-            }
-
-            &:hover {
-                filter: brightness(90%);
-                transform: scale(1.05);
-                transition: transform 0.3s ease-in-out;
-            }
         }
     }
 }
 
 section {
-    @include center();
+    @include flex-col-center();
 
     width: 100%;
     height: min-content;
@@ -165,24 +162,8 @@ section {
             object-fit: cover;
         }
 
-        button {
-            background-color: $secondary-color;
-            transition: transform 0.2s ease-in-out;
-
-            a {
-                font-size: 1em;
-                text-decoration: none;
-            }
-
-            &:hover {
-                filter: brightness(90%);
-                transform: scale(1.05);
-                transition: transform 0.3s ease-in-out;
-            }
-        }
-
         div.logo-and-slogan {
-            @include center();
+            @include flex-col-center();
 
             color: $secondary-color;
             gap: 10px;
@@ -202,20 +183,33 @@ section {
     }
 
     &#kontakt {
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: auto auto;
+        
+        align-items: start;
+
         gap: 10%;
 
-        div.kontakt-container {
-            display: flex;
-            flex-direction: column;
+        h3 {
+            font-family: $header-font;
+        }
+
+        div.container {
+            @include flex-col-center();
+
+            justify-content: space-between;
+            height: 100%;
             gap: 20px;
 
+            img.ssps-logo {
+                width: 280px;
+            }
+
             div.box {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
+                @include flex-row-center();
+
                 justify-content: space-between;
+                width: 100%;
                 gap: 32px;
 
                 h4 {
@@ -223,31 +217,7 @@ section {
                     padding: 0;
                     padding-bottom: 8px;
                 }
-
             }
-        }
-
-        div.sponzor {
-            img {
-                width: 250px;
-            }
-        }
-    }
-
-    &#galerie {
-        padding-left: 40px;
-        padding-right: 40px;
-        div.gallery-row {
-            display: inline-flex;
-            flex-direction: row;
-            gap: 20px;
-
-            width: 100%;
-            height: 300px;
-            overflow-y: auto;
-            overflow-x: visible;
-
-            white-space: nowrap;
         }
     }
 }
@@ -299,7 +269,7 @@ main {
 
 #tym {
     div.cards {
-        @include center();
+        @include flex-col-center();
 
         flex-direction: row;
         flex-wrap: wrap;
@@ -308,7 +278,7 @@ main {
         gap: 80px;
 
         div.clen-tymu {
-            @include center();
+            @include flex-col-center();
 
             img {
                 width: 125px;
@@ -356,7 +326,7 @@ footer {
     font-family: $subheader-font;
 
     nav ul {
-        @include center();
+        @include flex-col-center();
 
         align-items: flex-start;
 
@@ -374,7 +344,7 @@ footer {
     }
 
     div.logo-and-slogan {
-        @include center();
+        @include flex-col-center();
 
         text-align: center;
         color: $secondary-color;
@@ -390,7 +360,7 @@ footer {
     }
 
     .rightbox {
-        @include center();
+        @include flex-col-center();
 
         align-items: flex-end;
         color: inherit;
