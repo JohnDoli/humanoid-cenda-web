@@ -16,4 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Team section toggle
+    const teamSection = document.getElementById('tym');
+    if (teamSection) {
+        const toggleArrow = teamSection.querySelector('.toggle-arrow');
+        if (toggleArrow) {
+            toggleArrow.addEventListener('click', () => {
+                teamSection.classList.toggle('active');
+            });
+        }
+    }
 });

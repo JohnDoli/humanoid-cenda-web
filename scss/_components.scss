@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 
 .button {
     height: fit-content;
@@ -74,5 +75,54 @@
         background-color: $secondary-color;
         text-align: left;
         vertical-align: top;
+    }
+}
+
+.clen-tymu {
+    @include flex-col-center();
+    text-align: center;
+
+    img {
+        width: 125px;
+        height: 125px;
+
+        border-radius: 50%;
+        margin-bottom: 16px;
+
+        @include mobile {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 12px;
+        }
+    }
+
+    p {
+
+        &.jmeno {
+            font-family: $header-font;
+            font-size: 1.5em;
+
+            @include mobile {
+                font-size: 1.2em;
+            }
+        }
+        
+        &.skola {
+            font-family: $subheader-font;
+            font-size: 1em;
+
+            @include mobile {
+                font-size: 0.9em;
+            }
+        }
+
+        &.role {
+            font-family: $text-font;
+            font-size: 1em;
+
+            @include mobile {
+                font-size: 0.9em;
+            }
+        }
     }
 }

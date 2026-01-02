@@ -108,6 +108,54 @@ img {
   vertical-align: top;
 }
 
+.clen-tymu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.clen-tymu img {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .clen-tymu img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 12px;
+  }
+}
+.clen-tymu p.jmeno {
+  font-family: "Days One";
+  font-size: 1.5em;
+}
+@media (max-width: 768px) {
+  .clen-tymu p.jmeno {
+    font-size: 1.2em;
+  }
+}
+.clen-tymu p.skola {
+  font-family: "roboto slab";
+  font-size: 1em;
+}
+@media (max-width: 768px) {
+  .clen-tymu p.skola {
+    font-size: 0.9em;
+  }
+}
+.clen-tymu p.role {
+  font-family: "open sans";
+  font-size: 1em;
+}
+@media (max-width: 768px) {
+  .clen-tymu p.role {
+    font-size: 0.9em;
+  }
+}
+
 header, footer, section {
   padding: 0px 40px;
 }
@@ -388,6 +436,37 @@ main section div.model {
   }
 }
 
+@media (max-width: 768px) {
+  #tym {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#tym .toggle-arrow {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-top: 10px;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  #tym .toggle-arrow {
+    display: block;
+  }
+}
+#tym .toggle-arrow svg {
+  fill: #0f0f0f;
+  width: 48px;
+  height: 48px;
+}
+@media (max-width: 768px) {
+  #tym.active .toggle-arrow {
+    transform: rotate(180deg);
+  }
+}
 #tym div.cards {
   display: flex;
   flex-direction: column;
@@ -401,31 +480,13 @@ main section div.model {
 @media (max-width: 768px) {
   #tym div.cards {
     gap: 40px;
+    display: none;
   }
 }
-#tym div.cards div.clen-tymu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#tym div.cards div.clen-tymu img {
-  width: 125px;
-  height: 125px;
-  border-radius: 50%;
-  margin-bottom: 16px;
-}
-#tym div.cards div.clen-tymu p.jmeno {
-  font-family: "Days One";
-  font-size: 1.5em;
-}
-#tym div.cards div.clen-tymu p.skola {
-  font-family: "roboto slab";
-  font-size: 1em;
-}
-#tym div.cards div.clen-tymu p.role {
-  font-family: "open sans";
-  font-size: 1em;
+@media (max-width: 768px) {
+  #tym.active div.cards {
+    display: flex;
+  }
 }
 
 footer {

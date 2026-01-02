@@ -295,6 +295,38 @@ main {
 }
 
 #tym {
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .toggle-arrow {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        margin-top: 10px;
+        padding: 0;
+
+        @include mobile {
+            display: block;
+        }
+
+        svg {
+            fill: $primary-color;
+            width: 48px;
+            height: 48px;
+        }
+    }
+
+    &.active .toggle-arrow {
+        @include mobile {
+            transform: rotate(180deg);
+        }
+    }
+
     div.cards {
         @include flex-col-center();
 
@@ -306,36 +338,13 @@ main {
 
         @include mobile {
             gap: 40px;
+            display: none; // Hide by default on mobile
         }
+    }
 
-        div.clen-tymu {
-            @include flex-col-center();
-
-            img {
-                width: 125px;
-                height: 125px;
-
-                border-radius: 50%;
-                margin-bottom: 16px;
-            }
-
-            p {
-
-                &.jmeno {
-                    font-family: $header-font;
-                    font-size: 1.5em;
-                }
-                
-                &.skola {
-                    font-family: $subheader-font;
-                    font-size: 1em;
-                }
-
-                &.role {
-                    font-family: $text-font;
-                    font-size: 1em;
-                }
-            }
+    &.active div.cards {
+        @include mobile {
+            display: flex; // Show when active
         }
     }
 }
