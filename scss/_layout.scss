@@ -1,5 +1,12 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
 header, footer, section {
     padding: 0px 40px;
+
+    @include mobile {
+        padding: 0px 20px;
+    }
 }
 
 header {
@@ -12,15 +19,86 @@ header {
     color: $secondary-color;
 
     font-family: $header-font;
+    position: relative; // Needed for absolute positioning of mobile menu
+
+    @include mobile {
+        height: $header-height; // Keep fixed height for header bar
+        padding: 0 20px;
+        flex-direction: row; // Keep logo and burger in a row
+    }
 
     .logo {
         font-family: $header-font;
         font-size: 2em;
     }
 
+    .hamburger-menu {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 100;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+        }
+
+        span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $secondary-color;
+            border-radius: 3px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &.active {
+            span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+
+            span:nth-child(2) {
+                opacity: 0;
+            }
+
+            span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+        }
+    }
+
     nav {
         display: flex;
         flex-direction: row;
+
+        @include mobile {
+            position: absolute;
+            top: $header-height;
+            left: 0;
+            width: 100%;
+            background-color: $primary-color;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            gap: 20px;
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none; // Prevent clicking when hidden
+            transition: all 0.3s ease-in-out;
+            z-index: 99;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+            &.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
 
         ul {
             display: flex;
@@ -29,6 +107,18 @@ header {
             gap: 20px;
 
             list-style: none;
+
+            @include mobile {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+        
+        // Hide the button inside nav on mobile if it exists, or style it
+        .button {
+             @include mobile {
+                margin-left: 0;
+             }
         }
     }
 }
@@ -49,6 +139,10 @@ section {
 
         gap: 40px;
 
+        @include mobile {
+            height: calc(100vh - 140px); // Adjust for taller header on mobile
+        }
+
         img {
             z-index: -1;
             position: absolute;
@@ -63,11 +157,20 @@ section {
             .logo {
                 font-family: $header-font;
                 font-size: 5em;
+
+                @include mobile {
+                    font-size: 3em;
+                }
             }
 
             .slogan {
                 font-family: $subheader-font;
                 font-size: 2em;
+
+                @include mobile {
+                    font-size: 1.2em;
+                    text-align: center;
+                }
             }
         }
     }
@@ -79,6 +182,11 @@ section {
         align-items: start;
 
         gap: 10%;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
 
         h3 {
             font-family: $header-font;
@@ -93,6 +201,10 @@ section {
 
             img.ssps-logo {
                 width: 280px;
+                
+                @include mobile {
+                    width: 200px;
+                }
             }
 
             div.box {
@@ -101,6 +213,12 @@ section {
                 justify-content: space-between;
                 width: 100%;
                 gap: 32px;
+
+                @include mobile {
+                    flex-direction: column;
+                    gap: 20px;
+                    align-items: flex-start;
+                }
 
                 h4 {
                     text-align: left;
@@ -127,12 +245,22 @@ main {
     align-items: center;
     padding: 40px;
 
+    @include mobile {
+        padding: 20px;
+    }
+
     background-color: $white-color;
     section {
         flex-direction: row;
         gap: 120px;
 
         background-color: $white-color;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 40px;
+            padding: 0;
+        }
 
         h3 {
             text-align: left;
@@ -146,13 +274,22 @@ main {
             display: flex;
             flex-direction: column;
             gap: 16px;
+
+            @include mobile {
+                width: 100%;
+            }
         }
 
         div.model {
             width: 300px;
             height: 300px;
 
-            background-color: $gray-color
+            background-color: $gray-color;
+
+            @include mobile {
+                width: 100%;
+                max-width: 300px;
+            }
         }
     }
 }
@@ -166,6 +303,10 @@ main {
 
         padding: 20px;
         gap: 80px;
+
+        @include mobile {
+            gap: 40px;
+        }
 
         div.clen-tymu {
             @include flex-col-center();
@@ -214,10 +355,21 @@ footer {
 
     font-family: $subheader-font;
 
+    @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 40px;
+        text-align: center;
+    }
+
     nav ul {
         @include flex-col-center();
 
         align-items: flex-start;
+
+        @include mobile {
+            align-items: center;
+        }
 
         list-style: none;
 
@@ -253,5 +405,9 @@ footer {
 
         align-items: flex-end;
         color: inherit;
+
+        @include mobile {
+            align-items: center;
+        }
     }
 }

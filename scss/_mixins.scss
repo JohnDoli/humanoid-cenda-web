@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 @mixin flex-col-center {
     display: flex;
     flex-direction: column;
@@ -10,4 +12,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+@mixin mobile {
+    @media (max-width: $mobile-breakpoint) {
+        @content;
+    }
 }

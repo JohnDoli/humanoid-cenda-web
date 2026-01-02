@@ -1,9 +1,10 @@
 // byl pouzit copilot
-@import "./fonts.css";
 
-// Modules
-@import "scss/variables";
-@import "scss/mixins";
-@import "scss/base";
-@import "scss/components";
-@import "scss/layout";
+// Moduly
+@use "scss/variables";
+@use "scss/mixins";
+@use "scss/base";
+@use "scss/components";
+@use "scss/layout";
+
+@import "./fonts.css";
