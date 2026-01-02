@@ -1,0 +1,76 @@
+.button {
+    height: fit-content;
+    width: fit-content;
+    margin-left: 20px;
+    padding: 8px 16px;
+    background-color: $gray-color;
+    border-radius: 12px;
+    font-family: $header-font;
+
+    font-size: 1em;
+
+    color: $primary-color;
+    background-color: $secondary-color;
+
+    text-decoration: none; // Added because it was in 'ul a, a.button' selector before
+
+    &:hover {
+        filter: brightness(90%);
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+        text-decoration: underline; // Added to match previous behavior
+    }
+}
+
+// table style
+.tg  {
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    td {
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        overflow: hidden;
+        padding: 10px 5px;
+        word-break: normal;
+    }
+
+    th {
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        overflow: hidden;
+        padding: 10px 5px;
+        word-break: normal;
+    }
+
+    .tg-oxxk {
+        background-color: $light-gray;
+        text-align: center;
+        vertical-align: top;
+    }
+
+    .tg-baqh {
+        background-color: $secondary-color;
+        text-align: center;
+        vertical-align: top;
+    }
+
+    .tg-25ii {
+        background-color: $light-gray;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .tg-0lax {
+        background-color: $secondary-color;
+        text-align: left;
+        vertical-align: top;
+    }
+}

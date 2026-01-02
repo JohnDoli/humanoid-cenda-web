@@ -29,71 +29,17 @@ p {
   line-height: 1.5em;
 }
 
-ul a, a.button {
+ul a {
   text-decoration: none;
 }
-ul a:hover, a.button:hover {
+ul a:hover {
   text-decoration: underline;
 }
 
-header, footer, section {
-  padding: 0px 40px;
-}
-
-.logo {
-  font-family: "Days One";
-}
-
-.tg {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.tg td {
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  overflow: hidden;
-  padding: 10px 5px;
-  word-break: normal;
-}
-
-.tg th {
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  overflow: hidden;
-  padding: 10px 5px;
-  word-break: normal;
-}
-
-.tg .tg-oxxk {
-  background-color: #F0F0F0;
-  text-align: center;
-  vertical-align: top;
-}
-
-.tg .tg-baqh {
-  background-color: #dad726;
-  text-align: center;
-  vertical-align: top;
-}
-
-.tg .tg-25ii {
-  background-color: #F0F0F0;
-  text-align: left;
-  vertical-align: top;
-}
-
-.tg .tg-0lax {
-  background-color: #dad726;
-  text-align: left;
-  vertical-align: top;
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .button {
@@ -107,11 +53,63 @@ header, footer, section {
   font-size: 1em;
   color: #0f0f0f;
   background-color: #dad726;
+  text-decoration: none;
 }
 .button:hover {
   filter: brightness(90%);
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
+  text-decoration: underline;
+}
+
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.tg td {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+.tg th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+.tg .tg-oxxk {
+  background-color: #F0F0F0;
+  text-align: center;
+  vertical-align: top;
+}
+.tg .tg-baqh {
+  background-color: #dad726;
+  text-align: center;
+  vertical-align: top;
+}
+.tg .tg-25ii {
+  background-color: #F0F0F0;
+  text-align: left;
+  vertical-align: top;
+}
+.tg .tg-0lax {
+  background-color: #dad726;
+  text-align: left;
+  vertical-align: top;
+}
+
+header, footer, section {
+  padding: 0px 40px;
 }
 
 header {
@@ -159,9 +157,6 @@ section.hero-section {
 section.hero-section img {
   z-index: -1;
   position: absolute;
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
 }
 section.hero-section div.logo-and-slogan {
   display: flex;
@@ -271,7 +266,6 @@ main section div.model {
 #tym div.cards div.clen-tymu img {
   width: 125px;
   height: 125px;
-  object-fit: cover;
   border-radius: 50%;
   margin-bottom: 16px;
 }
