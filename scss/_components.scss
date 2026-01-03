@@ -78,3 +78,19 @@
         }
     }
 }
+
+.text-btn {
+    font-family: $header-font;
+    font-size: 1em;
+    color: $primary-color;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 0;
+    
+    &:hover {
+        opacity: 0.8;
+    }
+}
+

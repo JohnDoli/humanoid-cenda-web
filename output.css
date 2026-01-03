@@ -116,6 +116,20 @@ img {
   }
 }
 
+.text-btn {
+  font-family: "Days One";
+  font-size: 1em;
+  color: #0f0f0f;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 0;
+}
+.text-btn:hover {
+  opacity: 0.8;
+}
+
 header, footer, section {
   padding: 0px 40px;
 }
@@ -349,6 +363,7 @@ section#kontakt div.container div.box h4 {
 }
 #harmonogram p {
   max-width: 920px;
+  text-align: center;
 }
 
 #o-projektu {
@@ -356,6 +371,7 @@ section#kontakt div.container div.box h4 {
 }
 #o-projektu p {
   max-width: 920px;
+  text-align: center;
 }
 
 main {
@@ -553,7 +569,6 @@ hr.divider {
   width: 920px;
   border: none;
   border-top: 1px solid black;
-  margin: 20px 0;
 }
 @media (max-width: 768px) {
   hr.divider {
