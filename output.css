@@ -62,58 +62,18 @@ img {
   text-decoration: underline;
 }
 
-.tg {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-.tg td {
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  overflow: hidden;
-  padding: 10px 5px;
-  word-break: normal;
-}
-.tg th {
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  overflow: hidden;
-  padding: 10px 5px;
-  word-break: normal;
-}
-.tg .tg-oxxk {
-  background-color: #F0F0F0;
-  text-align: center;
-  vertical-align: top;
-}
-.tg .tg-baqh {
-  background-color: #dad726;
-  text-align: center;
-  vertical-align: top;
-}
-.tg .tg-25ii {
-  background-color: #F0F0F0;
-  text-align: left;
-  vertical-align: top;
-}
-.tg .tg-0lax {
-  background-color: #dad726;
-  text-align: left;
-  vertical-align: top;
-}
-
 .clen-tymu {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 180px;
+}
+@media (max-width: 768px) {
+  .clen-tymu {
+    width: 140px;
+  }
 }
 .clen-tymu img {
   width: 125px;
@@ -292,6 +252,9 @@ section.hero-section {
 section.hero-section img {
   z-index: -1;
   position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 section.hero-section div.logo-and-slogan {
   display: flex;
@@ -346,6 +309,10 @@ section#kontakt div.container {
 }
 section#kontakt div.container img.ssps-logo {
   width: 280px;
+  transition: transform 0.3s ease-in-out;
+}
+section#kontakt div.container img.ssps-logo:hover {
+  transform: scale(1.05);
 }
 @media (max-width: 768px) {
   section#kontakt div.container img.ssps-logo {
@@ -365,7 +332,6 @@ section#kontakt div.container div.box {
   section#kontakt div.container div.box {
     flex-direction: column;
     gap: 20px;
-    align-items: flex-start;
   }
 }
 section#kontakt div.container div.box h4 {
@@ -380,6 +346,16 @@ section#kontakt div.container div.box h4 {
 }
 #harmonogram span {
   color: black;
+}
+#harmonogram p {
+  max-width: 920px;
+}
+
+#o-projektu {
+  background-color: #CED4DA;
+}
+#o-projektu p {
+  max-width: 920px;
 }
 
 main {
@@ -427,7 +403,6 @@ main section div.textbox {
 main section div.model {
   width: 300px;
   height: 300px;
-  background-color: #CED4DA;
 }
 @media (max-width: 768px) {
   main section div.model {
@@ -435,7 +410,16 @@ main section div.model {
     max-width: 300px;
   }
 }
+main section div.model img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
 
+#tym {
+  background-color: #CED4DA;
+}
 @media (max-width: 768px) {
   #tym {
     display: flex;
@@ -555,6 +539,25 @@ footer .rightbox {
 @media (max-width: 768px) {
   footer .rightbox {
     align-items: center;
+  }
+}
+
+.divider-wrapper {
+  width: 100%;
+  background-color: #CED4DA;
+  display: flex;
+  justify-content: center;
+}
+
+hr.divider {
+  width: 920px;
+  border: none;
+  border-top: 1px solid black;
+  margin: 20px 0;
+}
+@media (max-width: 768px) {
+  hr.divider {
+    width: 90%;
   }
 }
 

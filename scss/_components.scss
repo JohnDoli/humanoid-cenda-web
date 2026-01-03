@@ -25,62 +25,14 @@
     }
 }
 
-// table style
-.tg  {
-    border-collapse: collapse;
-    border-spacing: 0;
-
-    td {
-        border-color: black;
-        border-style: solid;
-        border-width: 1px;
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        overflow: hidden;
-        padding: 10px 5px;
-        word-break: normal;
-    }
-
-    th {
-        border-color: black;
-        border-style: solid;
-        border-width: 1px;
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        font-weight: normal;
-        overflow: hidden;
-        padding: 10px 5px;
-        word-break: normal;
-    }
-
-    .tg-oxxk {
-        background-color: $light-gray;
-        text-align: center;
-        vertical-align: top;
-    }
-
-    .tg-baqh {
-        background-color: $secondary-color;
-        text-align: center;
-        vertical-align: top;
-    }
-
-    .tg-25ii {
-        background-color: $light-gray;
-        text-align: left;
-        vertical-align: top;
-    }
-
-    .tg-0lax {
-        background-color: $secondary-color;
-        text-align: left;
-        vertical-align: top;
-    }
-}
-
 .clen-tymu {
     @include flex-col-center();
     text-align: center;
+    width: 180px;
+
+    @include mobile {
+        width: 140px;
+    }
 
     img {
         width: 125px;
