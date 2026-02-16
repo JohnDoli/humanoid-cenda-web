@@ -10,11 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="output.css">
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
 </head>
 <body>
     <header>
         <div>
-            <span class="logo">Č.e.n.d.a</span>
+            <a href="/"><img class="logo" src="assets/logo-cenda.png" alt="logo"></a>
         </div>
         <button class="hamburger-menu" aria-label="Menu">
             <span></span>
@@ -33,57 +35,27 @@
     </header>
     <aside> 
         <section class="hero-section">
-            <img src="./assets/telo.png" alt="Hero image">
+            <img class="hero-image" src="./assets/telo.png" alt="Hero image">
             <div class="logo-and-slogan">
-                <h1 class="logo">Č.e.n.d.a</h1>
+                <img class="logo" src="assets/logo-cenda.png" alt="logo">
                 <span class="slogan">Studentský Humanoid</span>
             </div>
             <a href="#projekt" class="button">O projektu</a>
         </section>
-        <section id="harmonogram" class="first-after-hero">
-            <h2>Kde nás najdete?</h2>
-            <p>Můžete nás vidět na dnech otevřených dveří <a href="https://www.ssps.cz" target="_blank">Střední průmyslové školy a gymnázia</a> (SSPŠaG) nebo na výstavach MakerFaire Prague, OpenAlt a dalších.</p>
-        </section>
-        <section id="o-projektu">
-            <h2>O projektu</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, iure atque. Cum ullam laudantium nemo, ipsa atque odit non suscipit reiciendis! Eligendi, nemo reprehenderit. Eligendi veniam delectus esse a incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quae dolore. Quidem ea distinctio, molestiae commodi quos, natus cumque qui in doloremque consectetur iure cum alias tenetur obcaecati minus. Sapiente?</p>
-            <a href="#projekt" class="text-btn">Více o projektu</a>
-        </section>
-        <div class="divider-wrapper">
-            <hr class="divider">
-        </div>
-        <section id="tym">
-            <h2>Náš tým</h2>
-            <div class="cards">
-                <div class="clen-tymu">
-                    <img src="assets/telo.png" alt="profilovka">
-                    <p class="jmeno">Jan Doležal</p>
-                    <p class="skola">SSPŠaG</p>
-                    <p class="role">Vedení týmu</p>
-                </div>
-                <div class="clen-tymu">
-                    <img src="assets/telo.png" alt="profilovka">
-                    <p class="jmeno">Jan Vitousek</p>
-                    <p class="skola">SSPŠaG</p>
-                    <br>
-                </div>
-                <div class="clen-tymu">
-                    <img src="assets/telo.png" alt="profilovka">
-                    <p class="jmeno">Jan Beneš</p>
-                    <p class="skola">SPŠSE České Budějovice</p>
-                    <br>
-                </div>
-            </div>
-            <button class="toggle-arrow" aria-label="Zobrazit více">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-            </button>
-        </section>
     </aside>
     <main id="projekt">
-        <h2>Projekt</h2>
+        <h2 id="o-projektu">O projektu</h2>
         <section>
-            <div class="model">
-                <img src="assets/head.png" alt="telo">
+            <div class="textbox">
+                <h3>Vize</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis laboriosam deserunt, corporis architecto ab iusto saepe veniam blanditiis quisquam modi tenetur facere voluptate, porro cupiditate unde enim nihil soluta dicta!</p>
+            </div>
+            <!-- <div class="model"></div> -->
+        </section>
+        <section>
+            <div class="model-container">
+                <!-- <img class="model-image" src="assets/head.png" alt="telo"> -->
+                <model-viewer class="model" alt="" src="assets/3dbenchy.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
             </div>
             <div class="textbox">
                 <h3>Hlava</h3>
@@ -95,27 +67,79 @@
                 <h3>Tělo</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus neque iste nobis corporis maxime eos enim placeat repellendus! Suscipit laborum facere laudantium eius corrupti minus. Rerum cum earum ex asperiores.</p>
             </div>
-            <div class="model">
-                <img src="assets/telo.png" alt="telo">
+            <div class="model-container">
+                <!-- <img class="model-image" src="assets/telo.png" alt="telo"> -->
+                <model-viewer class="model" alt="" src="assets/3dbenchy.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
             </div>
         </section>
         <section>
-            <div class="model">
-                <img src="assets/podvozek.jpg" alt="telo">
+            <div class="model-container">
+                <!-- <img class="model-image" src="assets/podvozek.jpg" alt="telo"> -->
+                <model-viewer class="model" alt="" src="assets/assembly.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+
             </div>
             <div class="textbox">
                 <h3>Nohy</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo atque enim, porro totam quam illum molestiae in culpa, itaque soluta recusandae. Deleniti, placeat veniam quo iste dolorem voluptas ut officia.</p>
             </div>
         </section> 
-        <section>
-            <div class="textbox">
-                <h3>Vize</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis laboriosam deserunt, corporis architecto ab iusto saepe veniam blanditiis quisquam modi tenetur facere voluptate, porro cupiditate unde enim nihil soluta dicta!</p>
-            </div>
-            <!-- <div class="model"></div> -->
-        </section>
     </main>
+    <section id="harmonogram" class="first-after-hero">
+            <h2>Kde nás najdete?</h2>
+            <ul>
+                <li>dny otevřených dveří <a href="https://www.ssps.cz" target="_blank">Střední průmyslové školy a gymnázia</a></li>
+                <li>výstava MakerFaire Prague</li>
+                <li>konference OpenAlt</li>
+            </ul>
+            
+        </section>
+        <!-- <section id="o-projektu">
+            <h2>O projektu</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, iure atque. Cum ullam laudantium nemo, ipsa atque odit non suscipit reiciendis! Eligendi, nemo reprehenderit. Eligendi veniam delectus esse a incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quae dolore. Quidem ea distinctio, molestiae commodi quos, natus cumque qui in doloremque consectetur iure cum alias tenetur obcaecati minus. Sapiente?</p>
+            <a href="#projekt" class="text-btn">Více o projektu</a>
+        </section> -->
+        <section id="tym">
+            <h2>Náš tým</h2>
+            <div class="cards">
+                <div class="clen-tymu">
+                    <img src="assets/pfp-placeholder.png" alt="profilovka">
+                    <p class="jmeno">Jan Doležal</p>
+                    <p class="skola">SSPŠ</p>
+                    <p class="role">Vedení týmu</p>
+                    <p class="quote"></p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="clen-tymu">
+                    <img src="assets/pfp-placeholder.png" alt="profilovka">
+                    <p class="jmeno">Jan Vitousek</p>
+                    <p class="skola">SSPŠ</p>
+                    <p class="quote"></p>
+                </div>
+                <div class="clen-tymu">
+                    <img src="assets/pfp-placeholder.png" alt="profilovka">
+                    <p class="jmeno">Jan Beneš</p>
+                    <p class="skola">SPŠSE České Budějovice</p>
+                    <p class="quote"></p>
+
+                </div>
+                <div class="clen-tymu">
+                    <img src="assets/pfp-placeholder.png" alt="profilovka">
+                    <p class="jmeno">Šimon Kubec</p>
+                    <p class="skola">SSPŠ</p>
+                    <p class="quote"></p>
+                </div>
+                <div class="clen-tymu">
+                    <img src="assets/pfp-placeholder.png" alt="profilovka">
+                    <p class="jmeno">Jakub Kohoutek</p>
+                    <p class="skola">SSPŠ</p>
+                    <p class="quote"></p>
+                </div>
+            </div>
+            <button class="toggle-arrow" aria-label="Zobrazit více">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+            </button>
+        </section>
     <aside>
         <!-- <section id="galerie">
             <h2>Galerie</h2>
@@ -140,7 +164,7 @@
                 </div>
             </div>
             <div class="container">
-                <h3>Sponzor</h3>
+                <h2>Sponzor</h2>
                 <a href="https://www.ssps.cz" target="_blank">
                     <img class="ssps-logo" src="./assets/logo-SSPS.png" alt="Logo SSPŠaG">
                 </a>
@@ -158,7 +182,7 @@
             </ul>
         </nav>
         <div class="logo-and-slogan">
-            <span class="logo">Č.e.n.d.a</span>
+            <img class="logo" src="assets/logo-cenda.png"/>
             <span class="slogan">Studentský Humanoid</span>
         </div>
         <div class="rightbox">
